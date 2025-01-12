@@ -35,7 +35,7 @@ def test_model_bleu(model,val_loader,args, vocab):
     avg_bleu = corpus_bleu(references, hypotheses, smoothing_function=smoothing_fn)
     print(f"Validation Set Average BLEU Score: {avg_bleu:.4f}")
 
-def load_captions(captions_file='/root/autodl-tmp/flickr8k/captions.txt'):
+def load_captions(captions_file='image2text/qformer+llama/flickr8k/captions.txt'):
     """
     从 captions 文件中加载所有图片的 captions，并返回一个字典。
     
@@ -109,8 +109,8 @@ class Collate:
         captions = torch.stack([item[1] for item in batch], dim=1).permute(1, 0)  # [batch_size, max_length]
         return imgs, captions
 
-def get_loader(root_dir="/root/autodl-tmp/flickr8k/Images", 
-               caption_path="/root/autodl-tmp/flickr8k/captions.txt", 
+def get_loader(root_dir="image2text/qformer+llama/flickr8k/Images", 
+               caption_path="image2text/qformer+llama/flickr8k/captions.txt", 
                transform=None, 
                batch_size=48, 
                freq_threshold = 5, 

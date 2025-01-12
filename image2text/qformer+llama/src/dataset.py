@@ -47,8 +47,8 @@ class Vocabulary:
 
 class FlickrDataset(Dataset):
     def __init__(self, 
-                 root_dir="/root/autodl-tmp/flickr8k/Images", 
-                 caption_path="/root/autodl-tmp/flickr8k/captions.txt", 
+                 root_dir="image2text/qformer+llama/data/flickr8k/Images", 
+                 caption_path="image2text/qformer+llama/data/flickr8k/captions.txt", 
                  freq_threshold=5, 
                  transform=None, 
                  selecting_samples=10000, 
@@ -112,7 +112,7 @@ class FlickrDataset(Dataset):
 
         return img, torch.tensor(numericalized_caption)
 
-def split_train_val_dataset(caption_path="/root/autodl-tmp/flickr8k/captions.txt",
+def split_train_val_dataset(caption_path="image2text/qformer+llama/flickr8k/captions.txt",
                             train_ratio=0.8):
     caption_df = pd.read_csv(caption_path, delimiter=',', header=None, names=['image', 'caption'])
     img_caption_dict = {}
@@ -142,14 +142,14 @@ def split_train_val_dataset(caption_path="/root/autodl-tmp/flickr8k/captions.txt
         val_caption_df = val_caption_df._append({'image': img, 'caption': first_caption}, ignore_index=True)
     
     all_caption_df = pd.concat([train_caption_df, val_caption_df], ignore_index=True)
-    train_caption_df.to_csv("/root/autodl-tmp/flickr8k/train_captions.csv", index=False)
-    val_caption_df.to_csv("/root/autodl-tmp/flickr8k/val_captions.csv", index=False)
-    all_caption_df.to_csv("/root/autodl-tmp/flickr8k/all_captions.csv", index=False)
+    train_caption_df.to_csv("image2text/qformer+llama/flickr8k/train_captions.csv", index=False)
+    val_caption_df.to_csv("image2text/qformer+llama/flickr8k/val_captions.csv", index=False)
+    all_caption_df.to_csv("image2text/qformer+llama/flickr8k/all_captions.csv", index=False)
 
 class FlickrDatasetQFormer(Dataset):
     def __init__(self, 
-                 root_dir="/root/autodl-tmp/flickr8k/Images", 
-                 caption_path="/root/autodl-tmp/flickr8k/captions.txt",
+                 root_dir="image2text/qformer+llama/flickr8k/Images", 
+                 caption_path="image2text/qformer+llama/flickr8k/captions.txt",
                  transform=None):
         """
         Args:

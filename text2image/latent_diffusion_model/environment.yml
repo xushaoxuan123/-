@@ -1,4 +1,4 @@
-name: caption2img
+name: ldm
 channels:
   - conda-forge
   - defaults
