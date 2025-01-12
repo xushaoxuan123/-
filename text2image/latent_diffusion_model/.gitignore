@@ -22,3 +22,8 @@ __pycache__
 # Ignore data and generated images
 /root/Multimodal-Machine-Learning/text2image/ldm/data/flickr8k/*
 /root/Multimodal-Machine-Learning/text2image/ldm/data/flickr8k/vqvae_autoencoder_samples/*
+/root/Multimodal-Machine-Learning/text2image/latent_diffusion_model/config/celebhq_text_cond_bert.yaml
+/root/Multimodal-Machine-Learning/text2image/latent_diffusion_model/config/celebhq_text_image_cond.yaml
+/root/Multimodal-Machine-Learning/text2image/latent_diffusion_model/config/celebhq.yaml
+/root/Multimodal-Machine-Learning/text2image/latent_diffusion_model/config/mnist_class_cond.yaml
+/root/Multimodal-Machine-Learning/text2image/latent_diffusion_model/config/mnist.yaml
