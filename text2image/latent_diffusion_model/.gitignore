@@ -1,0 +1,24 @@
+# Ignore all image files
+*.jpg
+*.png
+*.jpeg
+
+# Ignore pycharm and system files
+.DS_Store
+*.idea
+__pycache__
+*.zip
+
+# Ignore dataset files
+*.csv
+*.json
+
+# Ignore checkpoints
+*.pth
+
+# Ignore pickle files
+*.pkl
+
+# Ignore data and generated images
+/root/Multimodal-Machine-Learning/text2image/ldm/data/flickr8k/*
+/root/Multimodal-Machine-Learning/text2image/ldm/data/flickr8k/vqvae_autoencoder_samples/*
