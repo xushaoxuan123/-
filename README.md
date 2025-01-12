@@ -17,9 +17,9 @@
 | CLIP(ViT-g/14)    | Q-former        | BERT                 | 52.3  | 36.7  | 24.7  | 15.8  |
 | CLIP(ViT-g/14)    | Q-former (预训练) | TinyLlama-1.1B      | **72.2**  | **50.9**  | **36.1**  | **25.9**  |
 
-Q-former + TinyLlama-1.1B生成的部分文如下图所示
+Q-former + TinyLlama-1.1B生成的部分文本如下图所示
 
-<img src="imgs_for_readme/captions.png" alt="caption" width="550"/>
+![img2text](imgs_for_readme/captions.png)
 
 ## 文生图模型
 我们进行了以下四组文生图模型实验：
@@ -30,6 +30,6 @@ Q-former + TinyLlama-1.1B生成的部分文如下图所示
 
 以下我们展示四组实验生成的部分图像：
 
-<img src="imgs_for_readme/diff1.png" alt="diff1" width="550"/>
+![diff1](imgs_for_readme/diff1.png)
 
-<img src="imgs_for_readme/diff2.png" alt="diff2" width="570"/>
+![diff2](imgs_for_readme/diff2.png)
